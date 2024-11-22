@@ -66,18 +66,15 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
 
     private fun updateUI(note:List<Note>)
     {
-        if(note!=null)
+        if(note.isNotEmpty())
         {
-            if(note.isNotEmpty())
-            {
-                binding.emptyNotesImage.visibility = View.GONE
-                binding.homeRecyclerView.visibility = View.VISIBLE
-            }
-            else
-            {
-                binding.emptyNotesImage.visibility = View.VISIBLE
-                binding.homeRecyclerView.visibility = View.GONE
-            }
+            binding.emptyNotesImage.visibility = View.GONE
+            binding.homeRecyclerView.visibility = View.VISIBLE
+        }
+        else
+        {
+            binding.emptyNotesImage.visibility = View.VISIBLE
+            binding.homeRecyclerView.visibility = View.GONE
         }
     }
 
@@ -96,11 +93,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
 
     private fun searchNote(query: String)
     {
-       val searchQuery = "%$query"
+       val searchQuery = "$query%"
 
         noteViewModel.searchNotes(searchQuery).observe(viewLifecycleOwner){
             notes -> noteAdapter.differ.submitList(notes)
         }
+
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
@@ -113,6 +111,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
             searchNote(newText)
         }
         return true
+
     }
 
     override fun onDestroy() {
