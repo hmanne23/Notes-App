@@ -1,5 +1,9 @@
 This Android application is a notes-taking app built using the MVVM architecture pattern and Room database for storage. It allows users to create, edit, and delete notes, ensuring data persistence and a smooth user experience. The app leverages modern Android development practices to provide a clean and efficient interface for managing personal notes.
 
+Instructions to Run the App: 
+Run the code after setting all the configurations, and also all the gradle settings
+And also make sure to set your Emulator before running the App
+
 ### Pinned Notes
 ![Pinned Notes](images/345398122-1c18c75f-fd66-48a0-a13d-f7c67788d7b7.png)
 
