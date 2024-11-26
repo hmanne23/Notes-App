@@ -4,10 +4,10 @@ This Android application is a notes-taking app built using the MVVM architecture
 ![Pinned Notes](images/345398122-1c18c75f-fd66-48a0-a13d-f7c67788d7b7.png)
 
 ### Searching Notes
-![Searching Notes](images/Searching Notes.jpeg)
+![Searching Notes](images/SearchingNotes.jpeg)
 
 ### Reminder Notes
-![Reminder Notes](images/Reminder Notes.jpeg)
+![Reminder Notes](images/ReminderNotes.jpeg)
 
 ## Additional Screenshots
 
